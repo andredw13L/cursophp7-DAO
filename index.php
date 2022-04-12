@@ -4,10 +4,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once("config.php");
 
-$sql = new Sql();
+$jose = new Usuario();
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$jose->loadbyId(3);
 
-echo json_encode($usuarios);
+echo $jose;
 
 ?>
